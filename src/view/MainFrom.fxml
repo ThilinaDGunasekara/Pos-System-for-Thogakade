@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anpLoging" prefHeight="501.0" prefWidth="650.0" style="-fx-background-color: #717272;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainFromController">
+   <children>
+      <ImageView fx:id="imgCustomer" fitHeight="117.0" fitWidth="105.0" layoutX="33.0" layoutY="144.0" onMouseClicked="#manageCustomer_OnAction" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/imgCustomer.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="imgOrder" fitHeight="117.0" fitWidth="105.0" layoutX="358.0" layoutY="144.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/imgOrder.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="imgItem" fitHeight="117.0" fitWidth="105.0" layoutX="195.0" layoutY="144.0" onMouseClicked="#picManageItems_OnClick" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/imgItem.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="imgViewOrders" fitHeight="117.0" fitWidth="105.0" layoutX="522.0" layoutY="144.0" onMouseClicked="#picSearchOrder_OnClick" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/imgViewOrders.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label fx:id="lbl" layoutX="258.0" layoutY="30.0" text="LOGING" textFill="#00fffb">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMenu" alignment="CENTER" contentDisplay="CENTER" layoutX="207.0" layoutY="304.0" prefHeight="41.0" prefWidth="237.0" textFill="#00fffb">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDescription" alignment="CENTER" contentDisplay="CENTER" layoutX="58.0" layoutY="355.0" prefHeight="26.0" prefWidth="536.0" text="Please select one of above main operations to proceed" textFill="#00fffb">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="apManageCus" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" prefHeight="507.0" prefWidth="654.0" style="-fx-background-color: #a1a1a1;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainFromManageItemController">
+   <children>
+      <JFXTextField fx:id="txtItemCode_id" focusColor="BLACK" labelFloat="true" layoutX="24.0" layoutY="143.0" onAction="#txtItemCode_OnAction" prefHeight="30.0" prefWidth="196.0" promptText="Item Code" unFocusColor="#00fffb">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtQuantityOH_id" focusColor="BLACK" labelFloat="true" layoutX="24.0" layoutY="290.0" onAction="#txtQuantityOH_OnAction" prefHeight="30.0" prefWidth="196.0" promptText="Quantity On Hand" unFocusColor="#00fffb">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXTextField>
+      <TableView fx:id="tblItemList" layoutX="242.0" layoutY="158.0" prefHeight="267.0" prefWidth="404.0">
+         <columns>
+            <TableColumn prefWidth="81.0" style="-fx-background-color: #b6b9ba;" text="Item Code" />
+            <TableColumn minWidth="0.0" prefWidth="125.0" style="-fx-background-color: #b6b9ba;" text="Description" />
+            <TableColumn prefWidth="104.0" style="-fx-background-color: #b6b9ba;" text="Qua.On Hand" />
+            <TableColumn prefWidth="93.0" style="-fx-background-color: #b6b9ba;" text="Unit Price" />
+         </columns>
+      </TableView>
+      <ImageView fx:id="picHome_id" fitHeight="84.0" fitWidth="132.0" layoutX="533.0" layoutY="14.0" onMouseClicked="#picHome_OnAction" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/blue-home-page-icon-png-16.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label fx:id="cart" alignment="CENTER" contentDisplay="CENTER" layoutX="50.0" layoutY="115.0" prefHeight="21.0" prefWidth="56.0" textFill="#00fffb">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="home" alignment="CENTER" contentDisplay="CENTER" layoutX="533.0" layoutY="115.0" prefHeight="21.0" prefWidth="79.0" textFill="#00fffb">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="223.0" layoutY="34.0" prefHeight="44.0" prefWidth="241.0" text="Manage Items" textFill="#00fffb">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="picNewItem_id" fitHeight="84.0" fitWidth="79.0" layoutX="33.0" layoutY="26.0" onMouseClicked="#picNewItem_OnClick" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/purchase-512.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnSave_Id" buttonType="RAISED" layoutX="33.0" layoutY="448.0" onAction="#btnSave_OnAction" prefHeight="38.0" prefWidth="79.0" style="-fx-background-color: #02daef;" text="Save" textFill="#000000cf" />
+      <JFXButton fx:id="btnDelete_Id" buttonType="RAISED" layoutX="131.0" layoutY="448.0" onAction="#btnDelete_OnAction" prefHeight="38.0" prefWidth="79.0" style="-fx-background-color: #02daef;" text="Delete" textFill="#000000cf" />
+      <JFXTextField fx:id="txtDescription_id" focusColor="BLACK" labelFloat="true" layoutX="24.0" layoutY="216.0" onAction="#txtDescription_OnAction" prefHeight="30.0" prefWidth="196.0" promptText="Description" unFocusColor="#00fffb">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtUnitPrice_id" focusColor="BLACK" labelFloat="true" layoutX="24.0" layoutY="364.0" onAction="#txtUnitPrice_OnAction" prefHeight="30.0" prefWidth="196.0" promptText="Unit Price" unFocusColor="#00fffb">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXTextField>
+      <Label fx:id="lblDescription" alignment="CENTER" contentDisplay="CENTER" layoutX="2.0" layoutY="254.0" prefHeight="30.0" prefWidth="241.0" textFill="#b50000" />
+      <Label fx:id="lblQOH" alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="326.0" prefHeight="30.0" prefWidth="241.0" textFill="#b50000" />
+      <Label fx:id="lblUnitPrice" alignment="CENTER" contentDisplay="CENTER" layoutX="2.0" layoutY="401.0" prefHeight="30.0" prefWidth="241.0" textFill="#b50000" />
+      <JFXButton fx:id="btnItemReport" buttonType="RAISED" layoutX="379.0" layoutY="448.0" onAction="#btnItemReport_OnAction" prefHeight="38.0" prefWidth="130.0" style="-fx-background-color: #02daef;" text="Item Report" textFill="#000000cf" />
+   </children>
+</AnchorPane>

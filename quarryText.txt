@@ -1,0 +1,38 @@
+create table Customer(
+
+    id VARCHAR(10),
+    name VARCHAR(20),
+    address VARCHAR(20),
+    constraint Customer_pk primary key (id)
+);
+
+create table Item(
+
+    code VARCHAR(10) PRIMARY KEY ,
+    description VARCHAR(20),
+    quantityOnHand INT(10),
+    unitPrice DECIMAL(10,2)
+);
+
+
+create table Orders(
+
+    orderId VARCHAR(10) PRIMARY KEY ,
+    date DATE,
+    id VARCHAR(10),
+    CONSTRAINT FOREIGN KEY(id) REFERENCES Customer(id)
+
+);
+
+create table OrderDetail(
+
+    orderId VARCHAR(10),
+    itemId VARCHAR(10),
+    quantity INT(10),
+    unitPrice DECIMAL(6,2),
+    CONSTRAINT FOREIGN KEY(orderId) REFERENCES Orders(orderId),
+    CONSTRAINT FOREIGN KEY(itemId) REFERENCES Item(code)
+
+);
+
+

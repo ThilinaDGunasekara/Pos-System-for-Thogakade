@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="apManageCus" prefHeight="522.0" prefWidth="653.0" snapToPixel="false" style="-fx-background-color: #a1a1a1;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MAinFromManageCustomerController">
+   <children>
+      <JFXTextField fx:id="txtId_ID" focusColor="BLACK" labelFloat="true" layoutX="45.0" layoutY="164.0" prefHeight="28.0" prefWidth="213.0" promptText="ID" unFocusColor="#00fffb">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtName_id" focusColor="BLACK" labelFloat="true" layoutX="42.0" layoutY="244.0" prefHeight="28.0" prefWidth="213.0" promptText="NAME" unFocusColor="#00fffb">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtAddress_Id" focusColor="BLACK" labelFloat="true" layoutX="42.0" layoutY="326.0" prefHeight="28.0" prefWidth="213.0" promptText="ADDRESS" unFocusColor="#00fffb">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXTextField>
+      <TableView fx:id="tblList_Id" layoutX="305.0" layoutY="154.0" prefHeight="259.0" prefWidth="324.0" stylesheets="@../CSS/TableView.css">
+        <columns>
+          <TableColumn prefWidth="72.0" text="ID" />
+          <TableColumn minWidth="0.0" prefWidth="120.0" text="NAME" />
+            <TableColumn prefWidth="131.0" text="ADDRESS" />
+        </columns>
+      </TableView>
+      <ImageView fx:id="picHome_id" fitHeight="90.0" fitWidth="88.0" layoutX="519.0" layoutY="11.0" onMouseClicked="#picHome_OnAction" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/blue-home-page-icon-png-16.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label fx:id="New" alignment="CENTER" contentDisplay="CENTER" layoutX="42.0" layoutY="109.0" prefHeight="21.0" prefWidth="64.0" textFill="#00fffb">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="home" alignment="CENTER" contentDisplay="CENTER" layoutX="527.0" layoutY="109.0" prefHeight="21.0" prefWidth="64.0" textFill="#00fffb">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="185.0" layoutY="34.0" prefHeight="44.0" prefWidth="283.0" text="Manage Customers" textFill="#00fffb">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="picNewCus_id" fitHeight="84.0" fitWidth="79.0" layoutX="32.0" layoutY="17.0" onMouseClicked="#picNewCus_OnClick" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/add-user-group-icon_485043.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnSave_Id" buttonType="RAISED" layoutX="58.0" layoutY="435.0" onAction="#btnSave_OnAction" prefHeight="44.0" prefWidth="79.0" style="-fx-background-color: #02daef;" text="Save" textFill="#000000cf" />
+      <JFXButton fx:id="btnDelete_Id" buttonType="RAISED" layoutX="169.0" layoutY="435.0" onAction="#btnDelete_OnAction" prefHeight="44.0" prefWidth="79.0" style="-fx-background-color: #02daef;" text="Delete" textFill="#000000cf" />
+      <Label fx:id="lblname" alignment="CENTER" contentDisplay="CENTER" layoutX="2.0" layoutY="283.0" prefHeight="44.0" prefWidth="301.0" textFill="#7f0000" />
+      <Label fx:id="lblAddress" alignment="CENTER" contentDisplay="CENTER" layoutX="2.0" layoutY="361.0" prefHeight="44.0" prefWidth="301.0" textFill="#7f0000" />
+      <JFXButton fx:id="btnCustomerReport" buttonType="RAISED" layoutX="398.0" layoutY="435.0" onAction="#btnCustomerReport_OnAction" prefHeight="44.0" prefWidth="141.0" style="-fx-background-color: #02daef;" text="Customer Report" textFill="#000000cf" />
+   </children>
+</AnchorPane>
